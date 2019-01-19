@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const createSearchForm = () => {
     const div = createElement('div', 'classList', 'student-search');
     const input = createElement('input', 'type', 'text');
-    input.placeholder = 'Search for students...';
+    input.placeholder = 'Search...';
     div.appendChild(input);
     appendNewElem(div, 'button', 'textContent', 'Search');
     pageHeader.appendChild(div);
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (results.length == 0) {
       removePagination();
       const errorDiv = createElement('div', 'classList', 'error-message');
-      errorDiv.textContent = "There are not matching results to your search.";
+      errorDiv.textContent = "No Matches.";
       pageContainer.appendChild(errorDiv);
     } else if(results.length < 10) {
       removePagination();
